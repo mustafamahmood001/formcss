@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- For css styling -->
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <!-- bootstrap CDN -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script></script>
+</head>
+
+<body>
+
+    <!-- For Form -->
+    <form method="post" onsubmit="return validateForm()">
+
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left red"></div>
+                <div class="col-md-9 register-right">
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">Student</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">Added Data</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Apply as a Student</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <!--fname div -->
+                                    <div class="form-group">
+                                        <input type="text" id="fname" name="fname" class="form-control"
+                                            placeholder="First Name *" value="" />
+                                        <span id="fname-error" class="text-danger"></span>
+                                    </div>
+                                    <!--lname div  -->
+                                    <div class="form-group">
+                                        <input type="text" id="lname" name="lname" class="form-control"
+                                            placeholder="Last Name *" value="" />
+                                        <span id="lname-error" class="text-danger"></span>
+                                    </div>
+                                    <!-- Password div -->
+                                    <div class="form-group">
+                                        <input type="password" id="password" name="password" class="form-control"
+                                            placeholder="Password *" value="" />
+                                        <span id="password-error" class="text-danger"></span>
+                                    </div>
+                                    <!-- rpassword div -->
+                                    <div class="form-group">
+                                        <input type="password" id="rpassword" name="rpassword" class="form-control"
+                                            placeholder="Confirm Password *" value="" />
+                                        <span id="rpassword-error" class="text-danger"></span>
+                                    </div>
+                                    <!-- Password div -->
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" id="male" value="male" checked>
+                                                <span> Male </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" id="female" value="female">
+                                                <span>Female </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <!-- email div -->
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="Your Email *" value="" />
+                                        <span id="email-error" class="text-danger"></span>
+                                    </div>
+                                    <!-- phone div -->
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="10" name="txtEmpPhone"
+                                            class="form-control" placeholder="Your Phone *" value="" />
+                                        <span id="phone-error" class="text-danger"></span>
+                                    </div>
+                                    <!-- city div -->
+                                    <div class="form-group">
+                                        <select class="form-control" id="city" name="city">
+                                            <option class="hidden" selected disabled>Please select your City</option>
+                                            <option>Lahore</option>
+                                            <option>Peshawar</option>
+                                            <option>Form</option>
+                                        </select>
+                                        <span id="city-error" class="text-danger"></span>
+                                    </div>
+                                    <input type="submit" class="btnRegister" value="Register" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="scripts.js"></script>
+</body>
+</html>
